@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fkom Parking</title>
+    <link rel="stylesheet" href="Leftpage.css">
+    <script src="js.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('vehicleregister.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('.right').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading right section:', error));
+        });
+    </script>
+</head>
+<body>
+    <!-- Left Section -->
+    <div class="left">
+        <img src="https://scontent-kul2-2.xx.fbcdn.net/v/t39.30808-6/364629984_748197910438982_698608483789866821_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=w80C0UWfAj4Q7kNvgHJcnxG&_nc_ht=scontent-kul2-2.xx&oh=00_AYBnqgVeI8rpvB3FhLFJsT1JG7Fk_yh1IWYyYv38zw-4NQ&oe=664F45E3" class="responsive-image" alt="Image">
+        <h1 class="image-caption">FKPark</h1>
+        
+        <p><button onclick="navigate('dashboard')">Dashboard</button></p>
+        <p><button onclick="navigate('user-profile')">User Profile</button></p>
+        <p><button onclick="window.location.href = 'leftprofilemanagement.html';">User Profile Management</button></p>
+        <p><button onclick="window.location.href = 'vehicleregister.html';">vehicle Registration</button></p>
+        <p><button onclick="navigate('book-parking')">Book Parking</button></p>
+        <p><button onclick="navigate('safety-dashboard')">Unit Keselamatan Dashboard</button></p>
+        <p><button onclick="window.location.href = 'ManageParking/ManageParking.html';">Manage Parking</button></p>
+        <p><button onclick="navigate('view-parking-slot')">View Parking Slot</button></p>
+        <p><button class="logout" onclick="logout()" id="logout">Logout</button></p>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right">
+       
+    </div>
+</body>
+</html>

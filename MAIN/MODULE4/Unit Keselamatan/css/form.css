@@ -1,0 +1,243 @@
+@charset "utf-8";
+*{
+	font-family: 'poppins' ,sans-serif;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.header{
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	background: linear-gradient(120deg,#33FFDA, #8e44ad);
+}
+.information{
+	max-width: 700px;
+	width: 100%;
+	background: white;
+	padding: 25px 30px;
+	border-radius: 5px;
+	border: 5px solid #2980b9;
+}
+.information .heading{
+	font-size: 22px;
+	font-weight: 500;
+}
+.information .heading::before{
+	content: '';
+	top: 0px;
+	height: 3px;
+	width: 260px;
+	background: linear-gradient(120deg,#2980b9, #8e44ad);
+}
+.information form .user-details{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+	margin: 20px 0 12px 0;
+	width: calc(100% / 2 - 20px)
+}
+.user-details .input-box input{
+	height: 45px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	border-bottom-width: 2px;
+	padding-left: 15px;
+	font-size: 16px;
+	transition: all o.3 ease;
+}
+.user-details .input-box .details{
+	display: block;	
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+form .user-details .textarea-box{
+	margin: 20px 0 12px 0;
+	width: calc(100% / 2 - 20px)
+}
+.user-details .textarea-box textarea{
+	height: 45px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	border-bottom-width: 2px;
+	padding-left: 15px;
+	font-size: 16px;
+	transition: all o.3 ease;
+}
+.user-details .textarea-box .details{
+	display: block;	
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+form .user-details .urusan{
+	margin: 20px 0 12px 0;
+	width: 100%;
+}
+.user-details .urusan input{
+	height: 45px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	border-bottom-width: 2px;
+	padding-left: 15px;
+	font-size: 16px;
+	transition: all o.3 ease;
+}
+.user-details .urusan .details{
+	display: block;	
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+form .user-details .inputfield{
+	margin: 20px 0 12px 0;
+	width: 100%;
+}
+.user-details .inputfield select{
+	height: 45px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	border-bottom-width: 2px;
+	padding-left: 15px;
+	font-size: 16px;
+	transition: all o.3 ease;
+}
+.user-details .inputfield .details{
+	display: block;	
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+.daftar{
+	height: 45px;
+	margin: 15px 0;
+}
+.daftar button{
+	height: 100%;
+	width: 100%;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	background: linear-gradient(120deg,#2980b9, #8e44ad);
+	cursor: pointer;
+}
+.buttonRow{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	min-height: 10vh;
+}
+.try{
+	height: 45px;
+	margin: 15px 10px;
+    width: 100%;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	background: linear-gradient(120deg,#2980b9, #8e44ad);
+	cursor: pointer;
+}
+.try::hover{
+	background: linear-gradient(120deg,#2980b9, #8e44ad);
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+	border-color: #8e44ad;	
+}
+
+.user-details .textarea-box textarea:focus,
+.user-details .textarea-box textarea:valid{
+	border-color: #8e44ad;	
+}
+
+.user-details .urusan input:focus,
+.user-details .urusan input:valid{
+	border-color: #8e44ad;	
+}
+
+.user-details .inputfield select:focus{
+	border-color: #8e44ad;	
+}
+
+/*----------Preview----------*/
+.information .heading2{
+	font-size: 22px;
+	font-weight: 500;
+	position: relative;
+	text-align: center;
+}
+.information .heading2::before{
+	content: '';
+	align-content: center;
+	position: absolute;
+	bottom: 0;
+	height: 3px;
+	width: 140px;
+	background: linear-gradient(120deg,#2980b9, #8e44ad);
+}
+.box{
+	height: 45px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	border-bottom-width: 2px;
+	padding-left: 15px;
+	padding-top: 12px;
+	font-size: 16px;
+	color: grey;
+}
+.notemail{
+    margin: 20px;
+	padding: 5px;
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+    align-items: center;
+}
+
+.thanks{
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+	position: relative;
+}
+
+
+/*---Responsive---*/
+@media (max-width: 584px) {
+	.information{
+		max-width: 100%;
+        max-height: none;
+	}
+	form .user-details .input-box,
+	form .user-details .urusan{
+		margin-bottom: 15px;
+		width: 100%;
+	}
+	.information form .user-details{
+		max-height: 300px;
+		overflow-y: scroll;
+	}
+	.user-details::-webkit-scrollbar{
+		width: 0;
+	}
+}

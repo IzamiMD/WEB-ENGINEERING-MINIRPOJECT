@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FK PARK Login</title>
+    <link rel="stylesheet" href="vehicleregistration.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <header>
+                <img src="FKOM.png" alt="Logo" class="logo"><br>
+                <span id="FKPARK">FK PARK</span>
+            </header>
+            <h2>REGISTER YOUR VEHICLE</h2>
+            <form id="loginForm" method="POST">
+                <div class="form-group">
+                    <input type="text" id="idnum" nam="idnumber" placeholder="Enter vehicle grant" required>
+
+                </div>
+                <div class="form-group">
+                    <input type="text" id="username" name="username" placeholder="Enter number plate" required>
+                </div>
+                <div class="form-group">
+                    <select id="role" name="role" required>
+                        <option value="" disabled selected>Car Type</option>
+                        <option value="student">Sedan</option>
+                        <option value="staff">MPV</option>
+                        <option value="admin">SUV</option>
+                    </select>
+                </div>
+                <button type="submit" id="loginbutton">REGISTER VEHICLE</button>
+            </form>
+        </div>
+        <div class="right-panel">
+            <p>Download your Barcode here after registration approved</p>
+            <img src="barcode.png" alt="Image" id="parkingpic"><br>
+            <button type="submit" id="downloadbutton">DOWNLOAD</button>
+
+        </div>
+    </div>
+    </div>
+</body>
+</html>
