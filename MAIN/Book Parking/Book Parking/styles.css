@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    background-color: #C0C0C0;
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.image-caption {
+    margin-top: 10px;
+    font-size: 24px;
+    align-self: center;
+}
+
+button {
+    font-size: 15px;
+    border-radius: 2px; 
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+.logout {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: right;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.logout:hover {
+    background-color: darkred;
+}
+
+.right {
+    background-color: lightgray;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    flex-grow: 1;
+    position: relative;
+    height: 105vh;
+}
+
+.right .top {
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.right .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.form-section {
+    padding-right: 500px;
+    margin-top: 140px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.time-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-container .form-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.time-container .form-group:last-child {
+    margin-right: 0;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.main-content .box {
+    width: 48%;
+    height: 150px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #333;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.car-park-image {
+    width: 100%;
+    height: auto;
+}
+
+.bottom-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.bottom-buttons .button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+}
+
+.bottom-buttons .button:hover {
+    background-color: #0056b3;
+}
+
+.form-feedback {
+    margin-top: 20px;
+}
+
+.form-feedback.success {
+    color: green;
+}
+
+.form-feedback.error {
+    color: red;
+}
+
+/* Popup Modal */
+.image-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.image-popup-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.image-popup-content, .image-popup-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}

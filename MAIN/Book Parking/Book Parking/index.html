@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fkom Parking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js.js" defer></script>
+</head>
+<body>
+    <!-- Left Section -->
+    <div class="left">
+        <img src="https://scontent-kul2-2.xx.fbcdn.net/v/t39.30808-6/364629984_748197910438982_698608483789866821_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=w80C0UWfAj4Q7kNvgHJcnxG&_nc_ht=scontent-kul2-2.xx&oh=00_AYBnqgVeI8rpvB3FhLFJsT1JG7Fk_yh1IWYyYv38zw-4NQ&oe=664F45E3" class="responsive-image" alt="Image" width="100" height="150">
+        <h1 class="image-caption">FKPark</h1>
+        
+        <p><button onclick="navigate('Leftpage.html')">Dashboard</button></p>
+        <p><button onclick="navigate('user-profile')">User Profile</button></p>
+        <p><button onclick="navigate('user-profile-management')">User Profile Management</button></p>
+        <p><button onclick="navigate('vehicle-registration')">Vehicle Registration</button></p>
+        <p><button onclick="navigate('book-parking')">Book Parking</button></p>
+        <p><button onclick="navigate('safety-dashboard')">Unit Keselamatan Dashboard</button></p>
+        <p><button onclick="navigate('manage-parking')">Manage Parking</button></p>
+        <p><button onclick="navigate('view-parking-slot')">View Parking Slot</button></p>
+        <p><button class="logout" onclick="logout()" id="logout">Logout</button></p>
+        
+    </div>
+
+    <!-- Right Section -->
+    <div class="right">
+        <div class="top">
+            <h1>Book Parking</h1>
+        </div>
+        <div class="bottom">
+            <div class="form-section">
+                <form id="booking-form" action="book_parking.php" method="POST">
+                    <div class="form-group">
+                        <label for="parking-area">Select Parking Area</label>
+                        <select id="parking-area" name="parking_area" required>
+                            <option value="area1">Area 1</option>
+                            <option value="area2">Area 2</option>
+                            <option value="area3">Area 3</option>
+                            <option value="area4">Area 4</option>
+                            <option value="area5">Area 5</option>
+                            <option value="area6">Area 6</option>
+                            <option value="area7">Area 7</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="slot-available">Slot Available</label>
+                        <select id="slot-available" name="slot_available" required>
+                            <option value="slot1">Slot 1</option>
+                            <option value="slot2">Slot 2</option>
+                            <option value="slot3">Slot 3</option>
+                            <option value="slot4">Slot 4</option>
+                            <option value="slot5">Slot 5</option>
+                            <option value="slot6">Slot 6</option>
+                            <option value="slot7">Slot 7</option>
+                            <option value="slot8">Slot 8</option>
+                            <option value="slot9">Slot 9</option>
+                            <option value="slot10">Slot 10</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="matric-id">Matric ID</label>
+                        <input type="text" id="matric-id" name="matric_id" placeholder="Matric ID" required>
+                    </div>
+                    <div class="form-group time-container">
+                        <div class="form-group">
+                            <label for="start-time">Start Time</label>
+                            <input type="datetime-local" id="start-time" name="start_time" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="end-time">End Time</label>
+                            <input type="datetime-local" id="end-time" name="end_time" required>
+                        </div>
+                    </div>
+                    <div class="main-content">
+                        <div class="box" id="qrcode">Generated QR Code</div>
+                    </div>
+                    <div class="bottom-buttons">
+                        <button type="button" class="button" onclick="generateQRCode()">Generate QR Code</button>
+                        <button type="submit" class="button">Book Parking</button>
+                        <button type="button" class="button" id="download-btn" style="display:none;" onclick="downloadQRCode()">Download QR Code</button>
+                    </div>
+                    <div id="form-feedback" class="form-feedback"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Popup Modal -->
+    <div id="image-popup" class="image-popup">
+        <span class="close" onclick="closeImagePopup()">&times;</span>
+        <img class="image-popup-content" id="image-popup-content">
+        <div id="caption"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

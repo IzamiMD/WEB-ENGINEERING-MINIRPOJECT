@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="device-width, initial-scale=1.0">
+	<title>Record Traffic Violation</title>
+    <link rel="stylesheet" href="css/sidebar.css">
+	<link href="css/form.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="left">
+        <img src="https://scontent-kul2-2.xx.fbcdn.net/v/t39.30808-6/364629984_748197910438982_698608483789866821_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=w80C0UWfAj4Q7kNvgHJcnxG&_nc_ht=scontent-kul2-2.xx&oh=00_AYBnqgVeI8rpvB3FhLFJsT1JG7Fk_yh1IWYyYv38zw-4NQ&oe=664F45E3" class="responsive-image" alt="Image">
+        <h1 class="image-caption">FKPark</h1>
+        
+        <p><button onclick="navigate('dashboard')">Dashboard</button></p>
+        <p><button onclick="navigate('user-profile')">User Profile</button></p>
+        <p><button onclick="navigate('User Profile Management')">User Profile Management</button></p>
+        <p><button onclick="navigate('Vehicle Registration')">Record Traffic Violation</button></p>
+        <p><button onclick="navigate('book-parking')">Summon Information</button></p>
+        <p><button class="logout" onclick="logout()" id="logout">Logout</button></p>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right">
+        <section class="header">
+            <div class="information">
+                <div class="heading">Please fill in the blank:</div>
+            <form>
+                <div class="user-details">
+                <div class="input-box">
+                  <span class="details">Summon ID</span>
+                    <input type="text" placeholder="" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">User ID</span>
+                    <input type="text" placeholder="" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Vehicle ID</span>
+                    <input type="text" placeholder="" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Demerit Point</span>
+                    <input type="number" placeholder="" required>
+                </div>
+
+
+                <div class="inputfield">
+                  <span class="details">Type</span>
+                        <select>
+                        <option value="" disabled="disabled" selected="selected">---</option>
+                        <option value="">---</option>
+                        <option value="">---</option>
+                        </select>
+                </div>
+              </div>
+
+            <!-- <div class="daftar">
+                  <a href="">
+                      <button>Add</button>
+                  </a>
+            </div> -->
+            
+
+            </form>
+            
+            <div class="buttonRow">
+                <input type="button" class="try" value="Add">
+                
+                <input type="button" class="try" value="Cancel">
+                
+                <input type="reset" class="try" value="Reset">
+            </div>
+
+            <input type="button" class="try" value="Generate QR">
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

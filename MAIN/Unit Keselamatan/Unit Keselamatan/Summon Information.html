@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summon Information</title>
+    
+    <link rel="stylesheet" href="css/sidebar.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.bootstrap.min.css">
+    <link rel="stylesheet" href=" https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap.min.css">
+
+</head>
+<body>
+    <!-- Left Section -->
+    <div class="left">
+        <img src="https://scontent-kul2-2.xx.fbcdn.net/v/t39.30808-6/364629984_748197910438982_698608483789866821_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=w80C0UWfAj4Q7kNvgHJcnxG&_nc_ht=scontent-kul2-2.xx&oh=00_AYBnqgVeI8rpvB3FhLFJsT1JG7Fk_yh1IWYyYv38zw-4NQ&oe=664F45E3" class="responsive-image" alt="Image">
+        <h1 class="image-caption">FKPark</h1>
+        
+        <p><button onclick="navigate('dashboard')">Dashboard</button></p>
+        <p><button onclick="navigate('user-profile')">User Profile</button></p>
+        <p><button onclick="navigate('User Profile Management')">User Profile Management</button></p>
+        <p><button onclick="navigate('Vehicle Registration')">Record Traffic Violation</button></p>
+        <p><button onclick="navigate('book-parking')">Summon Information</button></p>
+        <p><button class="logout" onclick="logout()" id="logout">Logout</button></p>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right">
+        <br>
+    <div class="container">
+        <table id="example" class="table table-bordered nowrap" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Summon ID</th>
+                    <th>User ID</th>
+                    <th>Vehicle ID</th>
+                    <th>Demerit Point</th>
+                    <th>Type</th>
+                    <th>Generate QR</th>
+                    <th>Notify Vehicle Owner</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1001</td>
+                    <td>S001</td>
+                    <td>T01</td>
+                    <td>61</td>
+                    <td></td>
+                    <td><input type="button" class="button" value="QR"></td>
+                    <td><input type="button" class="button" value="Notify"></td>
+                    <td><input type="button" class="button" value="Download"></td>
+                </tr>
+                <tr>
+                    <td>1002</td>
+                    <td>S002</td>
+                    <td>T02</td>
+                    <td>63</td>
+                    <td></td>
+                    <td><input type="button" class="button" value="QR"></td>
+                    <td><input type="button" class="button" value="Notify"></td>
+                    <td><input type="button" class="button" value="Download"></td>
+                </tr>
+                <tr>
+                    <td>1003</td>
+                    <td>S003</td>
+                    <td>T03</td>
+                    <td>66</td>
+                    <td></td>
+                    <td><input type="button" class="button" value="QR"></td>
+                    <td><input type="button" class="button" value="Notify"></td>
+                    <td><input type="button" class="button" value="Download"></td>
+                </tr>
+                <tr>
+                    <td>1004</td>
+                    <td>S004</td>
+                    <td>T04</td>
+                    <td>22</td>
+                    <td></td>
+                    <td><input type="button" class="button" value="QR"></td>
+                    <td><input type="button" class="button" value="Notify"></td>
+                    <td><input type="button" class="button" value="Download"></td>
+                </tr>
+                
+
+            <tfoot>
+                <tr>
+                    <th>Summon ID</th>
+                    <th>User ID</th>
+                    <th>Vehicle ID</th>
+                    <th>Demerit Point</th>
+                    <th>Type</th>
+                    <th>Generate QR</th>
+                    <th>Notify Vehicle Owner</th>
+                    <th>Download</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    </div>
+    
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.6/js/responsive.bootstrap.min.js  "></script>
+
+    <script>
+        $(document).ready(function() {
+            var table = $('#example').DataTable( {
+                responsive: true
+            } );
+        
+            new $.fn.dataTable.FixedHeader( table );
+        } );
+    </script>
+</body>
+</html>

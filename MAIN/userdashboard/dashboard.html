@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hi Hakimi!</h1>
+        </header>
+        <div class="dashboard">
+            <div class="graph">
+                <h2>Violation Status</h2>
+                <canvas id="violationChart"></canvas>
+            </div>
+            <div class="time-spent">
+                <h2>Time Spent in System</h2>
+                <p id="timeSpent">Loading...</p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

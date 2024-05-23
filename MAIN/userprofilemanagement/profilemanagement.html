@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fkom Parking</title>
+    <link rel="stylesheet" href="ManageParking.css">
+    <style>
+        /* Add your custom CSS styles here */
+    </style>
+    <script src="function.js" defer></script>
+</head>
+<body>
+    <!-- Left Section -->
+    <div class="left">
+        <img src="https://scontent-kul2-2.xx.fbcdn.net/v/t39.30808-6/364629984_748197910438982_698608483789866821_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=w80C0UWfAj4Q7kNvgHJcnxG&_nc_ht=scontent-kul2-2.xx&oh=00_AYBnqgVeI8rpvB3FhLFJsT1JG7Fk_yh1IWYyYv38zw-4NQ&oe=664F45E3" class="responsive-image" alt="Image">
+        <h1 class="image-caption">FKPark</h1>
+        
+        <p><button onclick="navigate('dashboard')">Dashboard</button></p>
+        <p><button onclick="navigate('user-profile')">User Profile</button></p>
+        <p><button onclick="navigate('User Profile Management')">User Profile Management</button></p>
+        <p><button onclick="navigate('Vehicle Registration')">Vehicle Registration</button></p>
+        <p><button onclick="navigate('book-parking')">Book Parking</button></p>
+        <p><button onclick="navigate('safety-dashboard')">Administrator Dashboard</button></p>
+        <p><button onclick="navigate('manage-parking')">Manage Parking</button></p>
+        <p><button onclick="navigate('view-parking-slot')">View Parking Slot</button></p>
+        <p><button class="logout" onclick="logout()" id="logout">Logout</button></p>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>User Profile Management</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+            <div class="container">
+                <h1>User Profile Management</h1>
+                <div class="profile-picture">
+                    <img src="download.jpeg" alt="Profile Picture" id="profileImg">
+                    
+                </div>
+                <div class="info">
+                    <p>Name: <span id="name">Lebron</span><button class="editButton" data-type="username">Edit</button></p>
+                    <p>Username: <span id="username">lebronjames</span> <button class="editButton" data-type="username">Edit</button></p>
+                    <p>Password: <span id="password">*******</span> <button class="editButton" data-type="password">Edit</button></p>
+                </div>
+                <div class="vehicle-info">
+                    <h2>Vehicle Information</h2>
+                    <p>Vehicle Grant: <span id="vehicleGrant">ABC123456</span></p>
+                    <p>Plate Number: <span id="plateNumber">XYZ 1234</span> </p>
+                    <p>Type of Car: <span id="carType">Sedan</span></p>
+                </div>
+                <button id="updateInfo">Update New Information</button>
+                <div class="actions">
+                    <button id="deleteAccount">Delete Account</button>
+                    <button id="createNewUser">Create New User</button>
+                </div>
+            </div>
+            <script src="scripts.js"></script>
+        </body>
+        </html>
+        
+    </div>
+</body>
+</html>
